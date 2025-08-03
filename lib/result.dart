@@ -6,8 +6,10 @@ import 'package:quiz/data/questions.dart';
 // ignore: must_be_immutable
 class Result extends StatelessWidget {
   const Result(this.selectedAnswer, this.restart, {super.key});
+
   final List<String> selectedAnswer;
   final void Function() restart;
+
   List<Map<String, Object>> get summaryData {
     final List<Map<String, Object>> summary = [];
 
@@ -25,6 +27,8 @@ class Result extends StatelessWidget {
 //Widget? swiitch;
   //oid Function() resultPge;
   @override
+  @override
+  @override
   Widget build(BuildContext context) {
     var numOfCorrectAns = 0;
 
@@ -39,10 +43,10 @@ class Result extends StatelessWidget {
       margin: const EdgeInsets.all(20),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
-        //  crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           Text(
-              'you answerd $numOfCorrectAns of ${questions.length} questions right',
+              'you answerd $numOfCorrectAns of ${questions
+                  .length} questions right',
               textAlign: TextAlign.center,
               style: GoogleFonts.ibmPlexMono(
                 fontWeight: FontWeight.bold,
@@ -62,15 +66,16 @@ class Result extends StatelessWidget {
           const SizedBox(
             height: 20,
           ),
-          numOfCorrectAns == 6
+          numOfCorrectAns ==
+              9 // <-- The condition has been changed to specifically check for 9.
               ? Text(
-                  'Niicee , wanna try again?',
-                  style: GoogleFonts.ibmPlexSans(),
-                )
+            'Niicee , wanna try again?',
+            style: GoogleFonts.ibmPlexSans(),
+          )
               : Text(
-                  'Try Again Loser',
-                  style: GoogleFonts.ibmPlexSans(),
-                )
+            'Try Again Loser',
+            style: GoogleFonts.ibmPlexSans(),
+          )
         ],
       ),
     );

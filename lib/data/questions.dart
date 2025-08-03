@@ -55,4 +55,59 @@ List<QuizQuestion> questions = [
       'By calling updateState()',
     ],
   ),
+  // New questions added here
+  QuizQuestion(
+    'What is "Hot Reload" in Flutter?',
+    [
+      'A feature that reloads the app instantly with code changes, preserving its state.',
+      'A feature that restarts the app from scratch.',
+      'A command to clear the app\'s cache.',
+      'A tool for debugging network requests.',
+    ],
+  ),
+  QuizQuestion(
+    'What is the purpose of the `pubspec.yaml` file?',
+    [
+      'To manage dependencies and assets for the project.',
+      'To define the app\'s main layout.',
+      'To store the app\'s state.',
+      'To handle user authentication.',
+    ],
+  ),
+  QuizQuestion(
+    'Which widget is used to create a vertical list of scrollable children?',
+    [
+      'ListView',
+      'Column',
+      'Row',
+      'Stack',
+    ],
+  ),
+  QuizQuestion(
+    'Which widget is used to place widgets on top of each other?',
+    [
+      'Stack',
+      'Row',
+      'Column',
+      'Container',
+    ],
+  ),
+  QuizQuestion(
+    'What is the main function of `mainAxisAlignment` and `crossAxisAlignment`?',
+    [
+      'To align widgets within a `Row` or `Column`.',
+      'To handle user input.',
+      'To manage the app\'s state.',
+      'To define the app\'s theme.',
+    ],
+  ),
+  QuizQuestion(
+    'What is `BuildContext` in Flutter?',
+    [
+      'A handle to the location of a widget in the widget tree.',
+      'A tool for debugging the app.',
+      'The data model for the app.',
+      'A class for creating animations.',
+    ],
+  ),
 ];

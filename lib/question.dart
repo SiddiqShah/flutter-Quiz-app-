@@ -17,15 +17,19 @@ class _QuestionsState extends State<Question> {
   var questionIn = 0;
   var rA = 0;
   void nextQ(String answer) {
+    // Call the function to store the selected answer
     widget.selectedAns(answer);
-    log(answer);
-    for (var c = 0; c <= questions.length; c++) {
-      if (answer == questions[questionIn].answers[0]) {
-        log('right ');
-      } else {
-        log('wrong  ');
-      }
+
+    // Check the answer once, without a loop
+    if (answer == questions[questionIn].answers[0]) {
+      log('right ');
+      // You could also increment a counter for right answers here if you want.
+      // e.g., rA++;
+    } else {
+      log('wrong  ');
     }
+
+    // Move to the next question
     setState(() {
       questionIn++;
     });
